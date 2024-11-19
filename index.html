@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Railway</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="topline">
+
+            <img src="trainLogo3.png" alt="" class="logo">
+            <h1 class="heading">INDIAN RAILWAYS</h1>
+        </div>
+        <nav>
+            
+            <ul>
+                    <li><a href="#search"><b>Search Trains</b></a></li>
+                    <li><a href="#live-status"><b>Live Status</b></a></li>
+                    <li><a href="#schedule"><b>Train Schedule</b></a></li>
+                    <li><a href="#booking"><b>Booking</b></a></li>
+            </ul>
+        </nav>
+    </header>   
+
+    <main>
+        <section id="search">
+            <h2>Search Trains</h2>
+            <form class="search" id="searchForm">
+                <label for="from">From:</label>
+                <input type="text" id="from" name="from" required>
+                <label for="to">To:</label>
+                <input type="text" id="to" name="to" required>
+                <button type="submit">Search</button>
+            </form>
+        </section>
+        <section id="results">
+            <h2>Train Results</h2>
+            <ul id="trainResults"></ul>
+        </section>
+
+        <!-- LIVE TRAIN STATUS -->
+        <section id="live-status">
+            <h2>Live Train Status</h2>
+            <form id="statusForm">
+                <label for="trainNumber">Train Number:</label>
+                <input type="text" id="trainNumber" name="trainNumber" required>
+                <button type="submit">Check Status</button>
+            </form>
+            <div id="statusResult"></div>
+        </section>
+
+        <!-- SCHEDULE -->
+        <section id="schedule">
+            <h2>Train Schedule</h2>
+            <form id="scheduleForm">
+                <label for="trainNumberSchedule">Train Number:</label>
+                <input type="text" id="trainNumberSchedule" name="trainNumberSchedule" required>
+                <button type="submit">Check Schedule</button>
+            </form>
+            <div id="scheduleResult"></div>
+        </section>
+
+        
+        <!-- BOOKING -->
+        <section id="booking">
+            <h2>Book Your Train Ticket</h2>
+            <form id="bookingForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="age">Age:</label>
+                <input type="number" id="age"   name="age" required min="1">
+
+                <label for="fromBooking">From:</label>
+                <input type="text" id="fromBooking" name="fromBooking" required>
+
+                <label for="toBooking">To:</label>
+                <input type="text" id="toBooking" name="toBooking" required>
+
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="cardNumber">Card Number:</label>
+                <input type="text" id="cardNumber" name="cardNumber" required>
+
+                <label for="expiryDate">Expiry Date:</label>
+                <input type="text" id="expiryDate" name="expiryDate" required placeholder="MM/YY">
+
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" required>
+
+                <button type="submit">Book and Pay</button>
+            </form>
+            <div class="bookingResult" id="bookingResult">
+                <div id="train-list"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Indian Railway. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
